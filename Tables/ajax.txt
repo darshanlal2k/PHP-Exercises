@@ -1,0 +1,4 @@
+hai welcome to ajax pratical session 
+have fun !!!
+<body>
+<h1>Darshan Lal</h1>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="classone">
+        <button class="open-button btn" id="somebtn">Form</button>
+        <div class="popup" id="myform">
+            <form action="details.php" class="form-container" name="fcreate" method="post">
+                <div class="form-control" id="hide">
+                    <div>
+                        <label>First-Name </label>
+                        <input type="text" name="fname" class="fname" onfocus="this.value=''" value=""
+                            pattern="[A-Za-z]{1,}" size="60" required>
+                    </div>
+                    <div>
+                        <label>Last-Name</label>
+                        <input type="text" name="lname" class="lname" onfocus="this.value=''" value=""
+                            pattern="[A-Za-z]{1,}" size="60" required>
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <input type="number" name="age" class="age" onfocus="this.value=''" value="" min="1" max="90"
+                            size="60" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" class="email" onfocus="this.value=''" value="" size="60"
+                            required>
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="number" name="phone" class="Phone" onfocus="this.value=''" value="" minlength="10"
+                            maxlength="10" min="5000000000" max="9999999999" size="55" required>
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <input type="text" name="delivery" class="delivery" onfocus="this.value=''" value="" size="60"
+                            required>
+                    </div>
+                    <div>
+                        <label>Gender</label>
+                        <select id="gender" class="gender" name="gender" onfocus="this.value=''" value="" required>
+                            <option hidden></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Course</label>
+                        <select name="course" id="course" onfocus="this.value=''" value="" required>
+                            <option hidden></option>
+                            <option>X</option>
+                            <option>XII</option>
+                            <option>BE</option>
+                            <option>ME</option>
+                            <option>B.Tech</option>
+                            <option>M.Tech</option>
+                            <option>Bsc</option>
+                            <option>Msc</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>District</label>
+                        <select name="district" id="district" onfocus="this.value=''" value="" required>
+                            <option hidden></option>
+                            <option>Tirunelveli</option>
+                            <option>Maniyachi</option>
+                            <option>Viruthunagar</option>
+                            <option>Madurai</option>
+                            <option>Salem</option>
+                            <option>Trichy</option>
+                            <option>Chengalpattu</option>
+                            <option>Tambaram</option>
+                            <option>Mambalam</option>
+                            <option>Egmore</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>State</label>
+                        <select name="state" id="statename" onfocus="this.value=''" value="" required>
+                            <option hidden></option>
+                            <option>TamilNadu</option>
+                            <option>Kerala</option>
+                            <option>Delhi</option>
+                            <option>Karnataka</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Goa</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Kolkata</option>
+                            <option>Gujarat</option>
+                            <option>Nepal</option>
+                        </select>
+                    </div>
+                    <button type="submit" onclick="checkform()" class="submitbtn btn">Submit</button>
+                    <button type="button" class="cancel btn" onclick="closeform()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="classtwo">
+        <form action="displaytable.php">
+            <input type="submit" value="Details" class="displaybtn btn">
+        </form>
+    </div>
+    <script src="action.js"> </script>
+    <!--<div id="demoo">
+
+        <button class="ajaxbtn" onclick="qwerty()">hi</button>
+    </div>
+
+     <div id="demo">
+        <h1>The XMLHttpRequest Object</h1>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div> 
+    
+    <script>
+        function qwerty() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200)
+                    document.getElementById("demoo").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "ajax.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML =
+                        this.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax.txt", true);
+            xhttp.send();
+        }
+
+        loadDoc("url-1", myFunction1);
+        loadDoc("url-2", myFunction2);
+
+function loadDoc(url, cFunction) {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {cFunction(this);}
+  xhttp.open("GET", url);
+  xhttp.send();
+}
+
+function myFunction1(xhttp) {
+  // action goes here
+}
+function myFunction2(xhttp) {
+  // action goes here
+}
+    </script> -->
+
+
+</body>
+
+</html>
